@@ -1,9 +1,7 @@
 ;;;; Author: Christopher Segale
 ;;;; Version: 1.0
 
-(ql:quickload "lispbuilder-sdl")
-(ql:quickload "lispbuilder-sdl-ttf")
-(ql:quickload "lispbuilder-sdl-image")
+(in-package #:tic-tac-toe)
 
 (defun winp (g p1 p2)
   (labels ((rowp (p r1 r2 r3)
@@ -29,7 +27,7 @@
         p2
         nil))))
 
-(defun tic-tac-toe ()
+(defun start-game ()
   (let ((player1 "X")
         (player2 "O")
         current

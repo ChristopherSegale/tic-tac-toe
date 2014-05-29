@@ -1,5 +1,7 @@
+CL=sbcl
+
 all:
-	sbcl --eval "(progn (load \"tic-tac-toe.lisp\") (save-lisp-and-die \"tic-tac-toe\" :toplevel #'tic-tac-toe :executable t))"
+	$(CL) --load build.lisp
 
 clean:
 	rm -f tic-tac-toe
